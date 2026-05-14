@@ -1,0 +1,36 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude\\hooks\\notify-stop.bat"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude\\hooks\\notify-permission.bat"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Bash(rm -rf*)",
+      "Bash(* rm -rf*)",
+      "Bash(*export*curl*)",
+      "Bash(*wget*$*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)"
+    ]
+  }
+}
